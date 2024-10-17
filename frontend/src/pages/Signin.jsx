@@ -7,6 +7,7 @@ import {
   signInFailure,
 } from '../redux/user/userSlice';
 import OAuth from '../components/OAuth';
+import axios from 'axios';
 
 export default function SignIn() {
   const [formData, setFormData] = useState({});
@@ -23,20 +24,22 @@ export default function SignIn() {
     e.preventDefault();
     try {
       dispatch(signInStart());
-      const res = await fetch('/api/auth/signin', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-      const data = await res.json();
-      console.log(data);
+      // const res = await fetch('/api/auth/signin', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify(formData),
+      // });
+      // const data = await res.json();
+      
+      const data = await axios.post('http://localhost:3000/api/auth/signin',formData);
+      
       if (data.success === false) {
         dispatch(signInFailure(data.message));
         return;
       }
-      dispatch(signInSuccess(data));
+      dispatch(signInSuccess(data.data));
       navigate('/');
     } catch (error) {
       dispatch(signInFailure(error.message));
