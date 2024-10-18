@@ -108,7 +108,7 @@ User Endpoints
 
 ![alt text](frontend/image-1.png)
 
-![alt text](frontend/image-2.png)
+![alt text](image.png)
 
 ![alt text](frontend/image-3.png)
 
