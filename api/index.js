@@ -6,8 +6,13 @@ import cors from "cors"
 import userRouter from './routes/userRoute.js';
 import authRouter from './routes/authRoute.js';
 import listingRouter from './routes/listingRoute.js';
+import path from 'path';
 const app=express();
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
+// const corsOptions = {
+//   origin: "http://localhost:5173", 
+//   credentials: true,
+//   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],}
+// app.use(cors(corsOptions));
 // app.use((req, res, next) => {
 //   res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
 //   res.setHeader('Cross-Origin-Embedder-Policy', 'require-corp');
@@ -26,6 +31,14 @@ app.use(cookieParser());
 app.use("/api/auth",authRouter);
 app.use("/api/user",userRouter);
 app.use('/api/listing', listingRouter);
+
+
+
+app.use(express.static(path.join(__dirname, '/client/dist')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
+})
 
 app.use((err, req, res, next) => {
     console.log(err);

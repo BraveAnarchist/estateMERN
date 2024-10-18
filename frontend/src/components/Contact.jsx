@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 
 export default function Contact({ listing }) {
   const [landlord, setLandlord] = useState(null);
@@ -12,9 +11,8 @@ export default function Contact({ listing }) {
   useEffect(() => {
     const fetchLandlord = async () => {
       try {
-        // const res = await fetch(`/api/user/${listing.userRef}`);
-        // const data = await res.json();
-        const data = await axios.post(`http://localhost:3000/api/user/${listing.userRef}`,{}, {withCredentials:true});
+        const res = await fetch(`/api/user/${listing.userRef}`);
+        const data = await res.json();
         setLandlord(data);
       } catch (error) {
         console.log(error);
@@ -22,6 +20,8 @@ export default function Contact({ listing }) {
     };
     fetchLandlord();
   }, [listing.userRef]);
+  console.log(landlord)
+  console.log("here")
   return (
     <>
       {landlord && (
