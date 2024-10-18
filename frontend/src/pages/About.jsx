@@ -8,7 +8,7 @@ export default function About() {
       <p className='mb-4 text-slate-700'>
       We're a real estate agency built on a foundation of trust, expertise, and a genuine commitment to exceeding expectations. We specialize in helping clients navigate the complexities of buying, selling, and renting properties in desirable neighborhoods
       </p>
-      <p className='mb-4 text-slate-700'>Whether you're searching for your dream home, exploring investment opportunities, or seeking a comfortable rental property, Better Estate is here to help you achieve your real estate goals. Let us guide you towards a brighter future.</p>
+      <p className='mb-4 texts-slate-700'>Whether you're searching for your dream home, exploring investment opportunities, or seeking a comfortable rental property, Better Estate is here to help you achieve your real estate goals. Let us guide you towards a brighter future.</p>
     </div>
   )
 }
