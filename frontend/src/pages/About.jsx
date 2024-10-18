@@ -3,12 +3,12 @@ import React from 'react'
 export default function About() {
   return (
     <div className='py-20 px-4 max-w-6xl mx-auto'>
-      <h1 className='text-3xl font-bold mb-4 text-slate-800'>About Sahand Estate</h1>
-      <p className='mb-4 text-slate-700'>Sahand Estate is a leading real estate agency that specializes in helping clients buy, sell, and rent properties in the most desirable neighborhoods. Our team of experienced agents is dedicated to providing exceptional service and making the buying and selling process as smooth as possible.</p>
+      <h1 className='text-3xl font-bold mb-4 text-slate-800'>About Better Estate</h1>
+      <p className='mb-4 text-slate-700'>At Better Estate, we understand that real estate is more than just bricks and mortar. It's about dreams, aspirations, and creating a future that feels right.</p>
       <p className='mb-4 text-slate-700'>
-      Our mission is to help our clients achieve their real estate goals by providing expert advice, personalized service, and a deep understanding of the local market. Whether you are looking to buy, sell, or rent a property, we are here to help you every step of the way.
+      We're a real estate agency built on a foundation of trust, expertise, and a genuine commitment to exceeding expectations. We specialize in helping clients navigate the complexities of buying, selling, and renting properties in desirable neighborhoods
       </p>
-      <p className='mb-4 text-slate-700'>Our team of agents has a wealth of experience and knowledge in the real estate industry, and we are committed to providing the highest level of service to our clients. We believe that buying or selling a property should be an exciting and rewarding experience, and we are dedicated to making that a reality for each and every one of our clients.</p>
+      <p className='mb-4 text-slate-700'>Whether you're searching for your dream home, exploring investment opportunities, or seeking a comfortable rental property, Better Estate is here to help you achieve your real estate goals. Let us guide you towards a brighter future.</p>
     </div>
   )
 }
