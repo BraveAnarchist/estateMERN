@@ -6,6 +6,10 @@ import cors from "cors"
 import userRouter from './routes/userRoute.js';
 import authRouter from './routes/authRoute.js';
 import listingRouter from './routes/listingRoute.js';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 import path from 'path';
 const app=express();
 // const corsOptions = {
